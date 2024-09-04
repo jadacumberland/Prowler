@@ -4,7 +4,7 @@ const fs = require("fs");
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('addid')
-        .setDescription('Adds username to your profile')
+        .setDescription('Adds or changes username in your profile')
         .addStringOption(option =>
             option.setName('game')
                 .setDescription('Game to add username for')
