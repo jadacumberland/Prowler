@@ -1,4 +1,3 @@
-const helpers = require("../../helperFunctions");
 const { SlashCommandBuilder } = require('discord.js');
 const fs = require("fs");
 
@@ -41,5 +40,7 @@ module.exports = {
         // 2b. Save file.
         fs.writeFileSync(jsonLocation, JSON.stringify(file));
 
+        // 3. Reply to interaction
+        interaction.reply({content: "Username was successfully added.", ephemeral: true})
     }
 }
