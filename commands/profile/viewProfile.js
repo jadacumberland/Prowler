@@ -1,4 +1,3 @@
-const helpers = require("../../helperFunctions");
 const { SlashCommandBuilder, EmbedBuilder} = require('discord.js');
 const fs = require('fs');
 

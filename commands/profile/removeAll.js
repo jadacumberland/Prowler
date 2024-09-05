@@ -1,4 +1,3 @@
-const helpers = require("../../helperFunctions");
 const { SlashCommandBuilder } = require('discord.js');
 const fs = require("fs");
 
@@ -21,7 +20,7 @@ module.exports = {
         }
         catch (err) {
             console.log(`ERROR: ${err}`);
-            interaction.reply({content: 'No matching game found. Check your spelling.', ephemeral: true});
+            interaction.reply({content: 'No matching user found.', ephemeral: true});
         }
     }
 }
