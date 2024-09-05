@@ -20,7 +20,7 @@ module.exports = {
 
         const userid = user.id;
         const username = user.globalName;
-        const userAvatar = user.avatarURL();
+        const userAvatar = user.displayAvatarURL();
 
         const file = JSON.parse(fs.readFileSync(`jsons/${interaction.guild.id}.json`, "utf-8"));
         const thisProfile = file[`${userid}`];
