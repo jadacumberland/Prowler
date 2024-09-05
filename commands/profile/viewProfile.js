@@ -12,15 +12,16 @@ module.exports = {
         // 1. Collect info from file using userid as a key
         let user = null;
         try {
-            user = interaction.options.getUser('user').id;
+            user = interaction.options.getUser('user');
         }
         catch (err) {
+            console.log(`[ERROR]: ${err}`);
             user = interaction.member.user;
         }
 
         const userid = user.id;
-        const username = user.globalName;
-        const userAvatar = user.displayAvatarURL();
+        const username = user.displayName;
+        const userAvatar = user.displayAvatarURL({dynamic: true});
 
         const file = JSON.parse(fs.readFileSync(`jsons/${interaction.guild.id}.json`, "utf-8"));
         const thisProfile = file[`${userid}`];
