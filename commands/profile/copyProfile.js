@@ -25,7 +25,7 @@ module.exports = {
         }
         catch (err) {
             console.log(`ERROR: ${err}`);
-            return(interaction.reply('Server profile does not exist.'));
+            return(interaction.reply({content: 'Server profile does not exist.', ephemeral: true}));
         }
 
         // 3. Attempt to open this server's file. If file does not exist, create it.
