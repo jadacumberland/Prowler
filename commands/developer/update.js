@@ -9,7 +9,7 @@ module.exports = {
     async execute(interaction) {
         if (interaction.member.user.id !== "176106602833772544")
             return interaction.reply("YOU DO NOT HAVE PERMISSION FOR THIS COMMAND.");
-        const child = await spawn('bash', ['./update.sh']);
+        await spawn('bash', ['./update.sh']);
 
         await interaction.reply({content: 'The bot repository has been updated.', ephemeral: true });
     },
