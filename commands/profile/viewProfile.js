@@ -1,5 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder} = require('discord.js');
 const fs = require('fs');
+const client = require('bot.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -37,7 +38,7 @@ module.exports = {
             .setThumbnail(userAvatar)
             .addFields(array);
 
-        console.log(`${client.application.commands.fetch()}`);
+        console.log(`${await client.application.commands.fetch()}`);
 
         // 2. Print to user
         await interaction.reply({embeds: [embed]});
