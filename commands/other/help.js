@@ -10,7 +10,8 @@ module.exports = {
         const embedArray = [];
         for (const cmd of cmdArray) {
             const command = client.commands.get(cmd);
-            embedArray.push({name: cmd, value: command.data.description});
+            if (!(cmd === "update"))
+                embedArray.push({name: cmd, value: command.data.description});
         }
 
         const embed = new EmbedBuilder()
