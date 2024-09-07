@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { Collection} = require('discord.js');
 const client = require('./client.js');
+const dotenv = require('dotenv').config();
 
 // Get TOKEN
 const TOKEN = process.env.DISCORD_TOKEN || "";
