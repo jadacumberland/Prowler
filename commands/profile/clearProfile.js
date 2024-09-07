@@ -4,7 +4,7 @@ const fs = require("fs");
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('clearprofile')
-        .setDescription('Removes all usernames from your profile.'),
+        .setDescription('Removes all usernames from your profile'),
     async execute(interaction) {
         // 1. Get username/game/id from user
         const jsonLocation = `jsons/${interaction.guild.id}.json`;
