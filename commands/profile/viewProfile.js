@@ -30,7 +30,7 @@ module.exports = {
 
         const array = [];
         for(const field in thisProfile) {
-            array.push({name: field, value: thisProfile[field]})
+            array.push({name: field, value: (thisProfile[field]).toString()});
         }
 
         const embed = new EmbedBuilder()

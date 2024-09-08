@@ -34,8 +34,13 @@ module.exports = {
             file[`${userid}`] = {};
         }
 
-        const thisProfile = file[`${userid}`]
-        thisProfile[game] = username;
+        if (file[`${userid}`][game] === undefined) {
+            file[`${userid}`][game] = [];
+        }
+
+        // Add username to file
+        let thisProfileGame = file[`${userid}`][game];
+        thisProfileGame.push(username);
 
         // 2b. Save file.
         fs.writeFileSync(jsonLocation, JSON.stringify(file));
