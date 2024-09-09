@@ -30,7 +30,7 @@ module.exports = {
 
         const array = [];
         for(const field in thisProfile) {
-            array.push({name: field, value: (thisProfile[field]).toString()});
+            array.push({name: field, value: (thisProfile[field]).toString().replaceAll(',', '\n')});
         }
 
         const embed = new EmbedBuilder()
