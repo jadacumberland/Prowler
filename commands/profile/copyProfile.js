@@ -45,6 +45,6 @@ module.exports = {
         fs.writeFileSync(newLocation, JSON.stringify(newFile));
 
         // 6. Reply to interaction.
-        interaction.reply({content: "Profile was successfully copied.", ephemeral: true})
+        interaction.reply({content: "Profile was successfully copied. Use `/viewprofile` to see the changes.", ephemeral: true})
     }
 }

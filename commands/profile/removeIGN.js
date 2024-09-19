@@ -44,7 +44,7 @@ module.exports = {
             // 2b. Save file.
             fs.writeFileSync(jsonLocation, JSON.stringify(file));
             console.log(`[INFO] Username was successfully removed.`);
-            interaction.reply({content: 'Username was successfully removed.', ephemeral: true})
+            interaction.reply({content: 'Username was successfully removed. Use `/viewprofile` to see the changes.', ephemeral: true})
         }
         catch (err) {
             console.log(`[ERROR] ${err}`);

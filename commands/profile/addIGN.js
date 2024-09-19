@@ -46,6 +46,6 @@ module.exports = {
         fs.writeFileSync(jsonLocation, JSON.stringify(file));
 
         // 3. Reply to interaction
-        interaction.reply({content: "Username was successfully added.", ephemeral: true});
+        interaction.reply({content: "Username was successfully added. Use `/viewprofile` to see the changes.", ephemeral: true});
     }
 }
